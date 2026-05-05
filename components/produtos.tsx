@@ -12,8 +12,8 @@ const products = [
   {
     title: "Papel Strong",
     description: "Alta resistência mecânica para embalagens que precisam de durabilidade e proteção reforçada contra impactos.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-oLQcQjIBMspfg6AFVkF2Bokr4aMpHi.png",
-    imageAlt: "Bobina de papel strong cinza clara em fundo branco",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kh2hPWWKco7JGL7N0zxiLog8k8gEWN.png",
+    imageAlt: "Folha avulsa de papel jornal cinza vista frontal",
   },
   {
     title: "Papel LWC",
@@ -36,14 +36,14 @@ const products = [
   {
     title: "Bobina Papel Jornal",
     description: "Bobina de papel jornal para impressão offset rotativa e aplicações de embrulho em larga escala.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kh2hPWWKco7JGL7N0zxiLog8k8gEWN.png",
-    imageAlt: "Folha avulsa de papel jornal cinza vista frontal",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-oLQcQjIBMspfg6AFVkF2Bokr4aMpHi.png",
+    imageAlt: "Bobina de papel strong cinza clara em fundo branco",
   },
   {
     title: "Bobina Papel LWC",
     description: "Bobina de papel revestido LWC para impressão contínua de alta definição em rotativas e equipamentos digitais.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s5KlfSSjznZsx7nCSrWz6xvGwCItXw.png",
-    imageAlt: "Folhas de papel LWC branco brilhante empilhadas",
+    image: "/images/D_NQ_NP_2X_606902-MLA95660371624_102025-F.webp",
+    imageAlt: "Bobina de Papel LWC branca sendo desenrolada",
   },
   {
     title: "Bobina Papel Kraft",
