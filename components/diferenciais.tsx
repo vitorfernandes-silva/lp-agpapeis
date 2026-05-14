@@ -39,7 +39,15 @@ export function Diferenciais() {
     <section id="diferenciais" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block text-primary font-medium text-sm tracking-wide uppercase mb-4">
+          <span
+            className="inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase mb-5 px-4 py-1.5 rounded-full"
+            style={{
+              backgroundColor: "rgba(240, 148, 54, 0.1)",
+              color: "#F09436",
+              border: "1px solid rgba(240, 148, 54, 0.2)",
+            }}
+          >
+            <span className="w-2 h-2 rounded-full bg-[#F09436] animate-pulse" />
             Por que escolher a AG Papéis
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">

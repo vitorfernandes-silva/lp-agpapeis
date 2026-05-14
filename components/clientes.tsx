@@ -48,13 +48,21 @@ const clientLogos = [
 export function Clientes() {
   return (
     <section className="relative bg-muted/30 py-16 md:py-20">
-      <div className="mx-auto max-w-5xl px-4">
-        <h2 className="mb-3 text-center font-sans text-xl font-medium tracking-tight text-muted-foreground md:text-2xl">
-          Parceiros que confiam em nós.
+      <div className="mx-auto max-w-5xl px-4 text-center">
+        <span
+          className="inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase mb-5 px-4 py-1.5 rounded-full"
+          style={{
+            backgroundColor: "rgba(240, 148, 54, 0.1)",
+            color: "#F09436",
+            border: "1px solid rgba(240, 148, 54, 0.2)",
+          }}
+        >
+          <span className="w-2 h-2 rounded-full bg-[#F09436] animate-pulse" />
+          Nossos Parceiros
+        </span>
+        <h2 className="mb-8 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
+          Empresas que escolheram a AG Papéis
         </h2>
-        <p className="mb-2 text-center font-sans text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-          Empresas que escolheram a AG Papéis.
-        </p>
         
         <div className="mx-auto my-6 h-px max-w-sm bg-border [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
 

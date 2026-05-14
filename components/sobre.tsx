@@ -7,7 +7,15 @@ export function Sobre() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <span className="inline-block text-primary font-medium text-sm tracking-wide uppercase">
+            <span
+              className="inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase mb-2 px-4 py-1.5 rounded-full"
+              style={{
+                backgroundColor: "rgba(240, 148, 54, 0.1)",
+                color: "#F09436",
+                border: "1px solid rgba(240, 148, 54, 0.2)",
+              }}
+            >
+              <span className="w-2 h-2 rounded-full bg-[#F09436] animate-pulse" />
               Quem somos
             </span>
             
@@ -28,7 +36,7 @@ export function Sobre() {
           {/* Right Image */}
           <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop"
+              src="/images/AG_quem_somos.png"
               alt="Fábrica de papel industrial"
               fill
               className="object-cover"

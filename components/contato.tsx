@@ -11,11 +11,11 @@ export function Contato() {
   const [isWhatsApp, setIsWhatsApp] = useState(false)
 
   return (
-    <section id="contato" className="py-20 md:py-28 bg-[#3A3535]">
+    <section id="contato" className="py-20 md:py-28 bg-[#111111]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Form */}
-          <div className="bg-[#4A4444] rounded-2xl p-6 md:p-10">
+          <div className="bg-gradient-to-br from-[#1c1c1c] to-[#2a2a2a] border border-white/5 rounded-2xl p-6 md:p-10 shadow-2xl">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-2">
               Solicite um orçamento
             </h2>
@@ -27,14 +27,14 @@ export function Contato() {
               <div>
                 <Input 
                   placeholder="Nome completo"
-                  className="bg-[#3A3535] border-[#5A5454] text-white placeholder:text-white/50 h-12"
+                  className="bg-black/40 border-white/10 text-white placeholder:text-white/50 h-12"
                 />
               </div>
               
               <div>
                 <Input 
                   placeholder="Empresa"
-                  className="bg-[#3A3535] border-[#5A5454] text-white placeholder:text-white/50 h-12"
+                  className="bg-black/40 border-white/10 text-white placeholder:text-white/50 h-12"
                 />
               </div>
               
@@ -42,7 +42,7 @@ export function Contato() {
                 <Input 
                   placeholder="Telefone"
                   type="tel"
-                  className="bg-[#3A3535] border-[#5A5454] text-white placeholder:text-white/50 h-12"
+                  className="bg-black/40 border-white/10 text-white placeholder:text-white/50 h-12"
                 />
                 <div className="flex items-center gap-2">
                   <Checkbox 
@@ -61,7 +61,7 @@ export function Contato() {
                 <Input 
                   placeholder="E-mail"
                   type="email"
-                  className="bg-[#3A3535] border-[#5A5454] text-white placeholder:text-white/50 h-12"
+                  className="bg-black/40 border-white/10 text-white placeholder:text-white/50 h-12"
                 />
               </div>
               
@@ -69,7 +69,7 @@ export function Contato() {
                 <Textarea 
                   placeholder="Mensagem"
                   rows={4}
-                  className="bg-[#3A3535] border-[#5A5454] text-white placeholder:text-white/50 resize-none"
+                  className="bg-black/40 border-white/10 text-white placeholder:text-white/50 resize-none"
                 />
               </div>
               
