@@ -1,16 +1,18 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Package, Cylinder, ChevronRight } from "lucide-react"
+import { ArrowRight, Package, Cylinder, ChevronRight, ChevronLeft } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { motion } from "framer-motion"
 
 type Product = {
   title: string
   description: string
-  image: string
+  images: string[]
   imageAlt: string
   category: "folha" | "bobina"
   highlights?: string[]
@@ -22,9 +24,12 @@ const products: Product[] = [
     title: "Papel Jornal",
     description:
       "Papel de baixo custo e baixa gramatura. É ideal para embrulho e proteção de mercadorias, como louças, proteção de objetos durante o transporte e preenchimento de caixas.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-S6t1lE5jkTVFNCOAO8OSim3kDqFyh6.png",
-    imageAlt: "Bobina de papel jornal bege desenrolando",
+    images: [
+      "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.05 (1).jpeg",
+      "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.05 (2).jpeg",
+      "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.06.jpeg"
+    ],
+    imageAlt: "Pacote de papel jornal",
     category: "folha",
     highlights: ["Baixo custo", "Proteção", "Embrulho"],
   },
@@ -32,9 +37,11 @@ const products: Product[] = [
     title: "Papel Strong",
     description:
       "Papel resistente e versátil, frequentemente fabricado a partir de material reciclado. Ideal para embalagens de marmitas, caixa de sapatos, forramento de bancadas e embalagens que precisam de durabilidade e proteção reforçada contra impactos. Apresenta ótimo custo benefício. Material atóxico.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kh2hPWWKco7JGL7N0zxiLog8k8gEWN.png",
-    imageAlt: "Folha avulsa de papel strong cinza vista frontal",
+    images: [
+      "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04 (1).jpeg",
+      "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04.jpeg"
+    ],
+    imageAlt: "Pacote de papel strong",
     category: "folha",
     highlights: ["Resistente", "Reciclado", "Atóxico"],
   },
@@ -42,9 +49,12 @@ const products: Product[] = [
     title: "Papel LWC",
     description:
       "Papel revestido em ambos os lados, de baixa gramatura. Papel branco, é ideal para impressões de alta qualidade, como revistas, catálogos e folhetos, oferecendo excelente brilho e reprodução de cores.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s5KlfSSjznZsx7nCSrWz6xvGwCItXw.png",
-    imageAlt: "Folhas de papel LWC branco brilhante empilhadas",
+    images: [
+      "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.04 (2).jpeg",
+      "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.04 (3).jpeg",
+      "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.05.jpeg"
+    ],
+    imageAlt: "Pacote de papel LWC",
     category: "folha",
     highlights: ["Alto brilho", "Impressão", "Revistas"],
   },
@@ -52,9 +62,16 @@ const products: Product[] = [
     title: "Papel Acoplado",
     description:
       "Papel composto por uma folha de papel de seda colado a uma barreira impermeável de plástico. Possibilidade para contato direto com alimentos, garantindo higiene e frescor na embalagem, além de funcionar como uma barreira para a gordura. Ideal para embrulho de lanche, frios e doces.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-NklJ88gGY2ZIxbiFnJwLJSDbmRYHRX.png",
-    imageAlt: "Caixa de papel acoplado para frios e lanches",
+    images: [
+      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (1).jpeg",
+      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (2).jpeg",
+      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (3).jpeg",
+      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07 (3).jpeg",
+      "/images/Caixa papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07 (1).jpeg",
+      "/images/Caixa papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07 (2).jpeg",
+      "/images/Caixa papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07.jpeg"
+    ],
+    imageAlt: "Caixa e pacote de papel acoplado",
     category: "folha",
     highlights: ["Alimentos", "Impermeável", "Higiênico"],
   },
@@ -63,9 +80,15 @@ const products: Product[] = [
     title: "Bobina Papel Strong",
     description:
       "Bobina composta por papel Strong. Pensada para otimizar processos de embalagem e proteção em larga escala. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dXtiLdglzVjf5imMltnE4Ox58raTk2.png",
-    imageAlt: "Duas bobinas de papel strong branco",
+    images: [
+      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (1).jpeg",
+      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (2).jpeg",
+      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (3).jpeg",
+      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08.jpeg",
+      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.09 (1).jpeg",
+      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.09.jpeg"
+    ],
+    imageAlt: "Bobina de papel strong",
     category: "bobina",
     highlights: ["40cm e 60cm", "Larga escala", "Menos desperdício"],
   },
@@ -73,9 +96,20 @@ const products: Product[] = [
     title: "Bobina Papel Jornal",
     description:
       "Bobina composta por papel jornal. Pensada para otimizar processos de embalagem e proteção em larga escala. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-oLQcQjIBMspfg6AFVkF2Bokr4aMpHi.png",
-    imageAlt: "Bobina de papel jornal cinza clara em fundo branco",
+    images: [
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.11 (3).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.12 (1).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.12.jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13 (1).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13 (2).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13 (3).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13.jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.14 (1).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.14.jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.15 (1).jpeg",
+      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.15.jpeg"
+    ],
+    imageAlt: "Bobina de papel jornal",
     category: "bobina",
     highlights: ["40cm e 60cm", "Embalagem", "Proteção"],
   },
@@ -83,8 +117,12 @@ const products: Product[] = [
     title: "Bobina Papel LWC",
     description:
       "Bobina composta por papel LWC. Pensada para impressão contínua de alta definição em equipamentos rotativos e equipamentos digitais. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
-    image: "/images/D_NQ_NP_2X_606902-MLA95660371624_102025-F.webp",
-    imageAlt: "Bobina de Papel LWC branca sendo desenrolada",
+    images: [
+      "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11 (1).jpeg",
+      "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11 (2).jpeg",
+      "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11.jpeg"
+    ],
+    imageAlt: "Bobina de Papel LWC",
     category: "bobina",
     highlights: ["40cm e 60cm", "Alta definição", "Impressão digital"],
   },
@@ -92,9 +130,12 @@ const products: Product[] = [
     title: "Bobina Papel Kraft",
     description:
       "Bobina composta por papel Kraft. Papel amplamente resistente. De coloração parda. Ideal para embrulhos, sacos proteção de produtos e proteção de pisos. Geralmente comercializada em 40cm e 60cm.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-d6ld8zK3tZLiwsuQD44y2lGvMIem3i.png",
-    imageAlt: "Bobinas de papel kraft empilhadas horizontalmente",
+    images: [
+      "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (1).jpeg",
+      "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (2).jpeg",
+      "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10.jpeg"
+    ],
+    imageAlt: "Bobina de papel kraft",
     category: "bobina",
     highlights: ["40cm e 60cm", "Alta resistência", "Sacos e embrulhos"],
   },
@@ -119,81 +160,151 @@ const cardVariants = {
 }
 
 function ProductCard({ product }: { product: Product }) {
+  const [currentImage, setCurrentImage] = useState(0)
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentImage((prev) => (prev === product.images.length - 1 ? 0 : prev + 1))
+  }
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentImage((prev) => (prev === 0 ? product.images.length - 1 : prev - 1))
+  }
+
   return (
     <motion.div variants={cardVariants} className="h-full">
-      <Card className="group relative overflow-hidden border border-white/5 shadow-md hover:shadow-xl transition-all duration-500 h-full flex flex-col rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#2a2a2a]">
-        {/* Image section */}
-        <div className="relative h-56 overflow-hidden">
-          <Image
-            src={product.image}
-            alt={product.imageAlt}
-            fill
-            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-          />
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <Dialog>
+        <DialogTrigger asChild>
+          <div className="h-full cursor-pointer focus:outline-none rounded-2xl ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+            <Card className="group relative overflow-hidden border border-white/5 shadow-md hover:shadow-xl transition-all duration-500 h-full flex flex-col rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#2a2a2a]">
+              {/* Image section */}
+              <div className="relative h-56 overflow-hidden bg-white/5">
+                <Image
+                  src={product.images[0]}
+                  alt={product.imageAlt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-          {/* Category badge */}
-          <div className="absolute top-3 left-3">
-            <Badge
-              className="text-xs font-semibold px-3 py-1 rounded-full border-0 shadow-md backdrop-blur-sm"
-              style={{
-                backgroundColor: product.category === "folha" ? "rgba(240, 148, 54, 0.9)" : "rgba(30, 30, 30, 0.85)",
-                color: "#fff",
-              }}
-            >
-              {product.category === "folha" ? (
-                <Package className="w-3 h-3 mr-1" />
-              ) : (
-                <Cylinder className="w-3 h-3 mr-1" />
-              )}
-              {product.category === "folha" ? "Papel Cortado" : "Bobina"}
-            </Badge>
-          </div>
-        </div>
+                {/* Gallery icon overlay */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="bg-black/50 text-white backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                    Ver {product.images.length} fotos
+                  </span>
+                </div>
 
-        {/* Content */}
-        <CardHeader className="pb-2 pt-5 px-5">
-          <CardTitle className="font-serif text-xl font-bold text-white leading-tight group-hover:text-[#F09436] transition-colors duration-300">
-            {product.title}
-          </CardTitle>
-        </CardHeader>
+                {/* Category badge */}
+                <div className="absolute top-3 left-3 z-10">
+                  <Badge
+                    className="text-xs font-semibold px-3 py-1 rounded-full border-0 shadow-md backdrop-blur-sm"
+                    style={{
+                      backgroundColor: product.category === "folha" ? "rgba(240, 148, 54, 0.9)" : "rgba(30, 30, 30, 0.85)",
+                      color: "#fff",
+                    }}
+                  >
+                    {product.category === "folha" ? (
+                      <Package className="w-3 h-3 mr-1" />
+                    ) : (
+                      <Cylinder className="w-3 h-3 mr-1" />
+                    )}
+                    {product.category === "folha" ? "Papel Cortado" : "Bobina"}
+                  </Badge>
+                </div>
+              </div>
 
-        <CardContent className="px-5 pb-2 flex-1">
-          <p className="text-gray-300 text-sm leading-relaxed line-clamp-4">
-            {product.description}
-          </p>
+              {/* Content */}
+              <CardHeader className="pb-2 pt-5 px-5">
+                <CardTitle className="font-serif text-xl font-bold text-white leading-tight group-hover:text-[#F09436] transition-colors duration-300">
+                  {product.title}
+                </CardTitle>
+              </CardHeader>
 
-          {/* Highlights / tags */}
-          {product.highlights && (
-            <div className="flex flex-wrap gap-1.5 mt-4">
-              {product.highlights.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-block text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#F09436]/20 text-[#ffb870] border border-[#F09436]/30"
+              <CardContent className="px-5 pb-2 flex-1">
+                <p className="text-gray-300 text-sm leading-relaxed line-clamp-4">
+                  {product.description}
+                </p>
+
+                {/* Highlights / tags */}
+                {product.highlights && (
+                  <div className="flex flex-wrap gap-1.5 mt-4">
+                    {product.highlights.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-block text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#F09436]/20 text-[#ffb870] border border-[#F09436]/30"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+
+              <CardFooter className="px-5 pb-5 pt-2">
+                <Link
+                  href="#contato"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#F09436] hover:text-[#d47e24] transition-colors duration-300 group/link"
                 >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </CardContent>
+                  Solicitar cotação
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#F09436]/10 group-hover/link:bg-[#F09436]/20 transition-colors duration-300">
+                    <ChevronRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                  </span>
+                </Link>
+              </CardFooter>
 
-        <CardFooter className="px-5 pb-5 pt-2">
-          <Link
-            href="#contato"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#F09436] hover:text-[#d47e24] transition-colors duration-300 group/link"
-          >
-            Solicitar cotação
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#F09436]/10 group-hover/link:bg-[#F09436]/20 transition-colors duration-300">
-              <ChevronRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
-            </span>
-          </Link>
-        </CardFooter>
+              {/* Accent border on hover */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F09436] to-[#f7b267] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            </Card>
+          </div>
+        </DialogTrigger>
 
-        {/* Accent border on hover */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F09436] to-[#f7b267] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-      </Card>
+        <DialogContent className="w-[95vw] max-w-[70vw] max-h-[85vh] bg-[#1c1c1c] border-white/10 p-2 sm:p-4 gap-0 overflow-hidden" showCloseButton={true}>
+          <DialogTitle className="sr-only">{product.title}</DialogTitle>
+          <DialogDescription className="sr-only">{product.description}</DialogDescription>
+          
+          <div className="relative w-full h-[75vh] bg-black/50 rounded-lg overflow-hidden flex items-center justify-center">
+            <Image
+              src={product.images[currentImage]}
+              alt={`${product.title} - Imagem ${currentImage + 1}`}
+              fill
+              className="object-contain"
+            />
+            
+            {product.images.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-colors backdrop-blur-sm z-10 focus:outline-none focus:ring-2 focus:ring-[#F09436]"
+                >
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-colors backdrop-blur-sm z-10 focus:outline-none focus:ring-2 focus:ring-[#F09436]"
+                >
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
+              </>
+            )}
+
+            {/* Dots */}
+            {product.images.length > 1 && (
+              <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex flex-wrap justify-center gap-1.5 sm:gap-2 z-10 max-w-[80%]">
+                {product.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setCurrentImage(idx); }}
+                    className={`h-1.5 sm:h-2 rounded-full transition-all focus:outline-none ${idx === currentImage ? 'bg-[#F09436] w-4 sm:w-6' : 'bg-white/50 hover:bg-white w-1.5 sm:w-2'}`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </motion.div>
   )
 }
@@ -380,3 +491,4 @@ export function Produtos() {
     </section>
   )
 }
+
