@@ -25,6 +25,7 @@ const products: Product[] = [
     description:
       "Papel de baixo custo e baixa gramatura. É ideal para embrulho e proteção de mercadorias, como louças, proteção de objetos durante o transporte e preenchimento de caixas.",
     images: [
+      "/images/Pacote papel Jornal/Pacote papel jornal (capa).png",
       "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.05 (1).jpeg",
       "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.05 (2).jpeg",
       "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.06.jpeg"
@@ -38,6 +39,7 @@ const products: Product[] = [
     description:
       "Papel resistente e versátil, frequentemente fabricado a partir de material reciclado. Ideal para embalagens de marmitas, caixa de sapatos, forramento de bancadas e embalagens que precisam de durabilidade e proteção reforçada contra impactos. Apresenta ótimo custo benefício. Material atóxico.",
     images: [
+      "/images/Pacote papel Strong/Pacote papel strong (capa).png",
       "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04 (1).jpeg",
       "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04.jpeg"
     ],
@@ -50,6 +52,7 @@ const products: Product[] = [
     description:
       "Papel revestido em ambos os lados, de baixa gramatura. Papel branco, é ideal para impressões de alta qualidade, como revistas, catálogos e folhetos, oferecendo excelente brilho e reprodução de cores.",
     images: [
+      "/images/Pacote papel LWC/Pacote papel LWC (capa).png",
       "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.04 (2).jpeg",
       "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.04 (3).jpeg",
       "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.05.jpeg"
@@ -63,6 +66,8 @@ const products: Product[] = [
     description:
       "Papel composto por uma folha de papel de seda colado a uma barreira impermeável de plástico. Possibilidade para contato direto com alimentos, garantindo higiene e frescor na embalagem, além de funcionar como uma barreira para a gordura. Ideal para embrulho de lanche, frios e doces.",
     images: [
+      "/images/Pacote papel acoplado/Pacote papel acoplado (capa).png",
+      "/images/Caixa papel acoplado/Papel Acoplado (capa).png",
       "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (1).jpeg",
       "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (2).jpeg",
       "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (3).jpeg",
@@ -81,6 +86,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel Strong. Pensada para otimizar processos de embalagem e proteção em larga escala. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
     images: [
+      "/images/Bobina Strong/Bobina Strong (capa).png",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (1).jpeg",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (2).jpeg",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (3).jpeg",
@@ -97,6 +103,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel jornal. Pensada para otimizar processos de embalagem e proteção em larga escala. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
     images: [
+      "/images/Bobina Jornal/Bobina Jornal (capa).png",
       "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.11 (3).jpeg",
       "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.12 (1).jpeg",
       "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.12.jpeg",
@@ -118,6 +125,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel LWC. Pensada para impressão contínua de alta definição em equipamentos rotativos e equipamentos digitais. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
     images: [
+      "/images/Bobina LWC/Bobina LWC (capa).png",
       "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11 (1).jpeg",
       "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11 (2).jpeg",
       "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11.jpeg"
@@ -131,6 +139,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel Kraft. Papel amplamente resistente. De coloração parda. Ideal para embrulhos, sacos proteção de produtos e proteção de pisos. Geralmente comercializada em 40cm e 60cm.",
     images: [
+      "/images/Bobina Semi Kraft/Bobina LWC (capa).png",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (1).jpeg",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (2).jpeg",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10.jpeg"
