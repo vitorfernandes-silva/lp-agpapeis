@@ -36,7 +36,7 @@ export function Sobre() {
           {/* Right Image */}
           <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/AG_quem_somos.png"
+              src="/images/refilamento.jpeg"
               alt="Fábrica de papel industrial"
               fill
               className="object-cover"
