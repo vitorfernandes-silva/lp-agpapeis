@@ -25,9 +25,7 @@ const products: Product[] = [
     description:
       "Papel resistente e versátil. Ideal para embalagens de marmitas, caixa de sapatos, forrações e proteção contra impactos.",
     images: [
-      "/images/papel-strong.jpeg",
-      "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04 (1).jpeg",
-      "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04.jpeg"
+      "/images/papel-strong.jpeg"
     ],
     imageAlt: "Pacote de papel strong",
     category: "folha",
@@ -38,14 +36,7 @@ const products: Product[] = [
     description:
       "Papel com barreira impermeável, ideal para lanches, frios e doces. Preserva o frescor e protege contra gordura.",
     images: [
-      "/images/papel-acoplado.jpeg",
-      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (1).jpeg",
-      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (2).jpeg",
-      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (3).jpeg",
-      "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07 (3).jpeg",
-      "/images/Caixa papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07 (1).jpeg",
-      "/images/Caixa papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07 (2).jpeg",
-      "/images/Caixa papel acoplado/WhatsApp Image 2026-05-15 at 09.12.07.jpeg"
+      "/images/papel-acoplado.jpeg"
     ],
     imageAlt: "Caixa e pacote de papel acoplado",
     category: "folha",
@@ -57,13 +48,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel strong. Ideal para embrulhos, embalagens e diversos fins.",
     images: [
-      "/images/bobina-strong.jpeg",
-      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (1).jpeg",
-      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (2).jpeg",
-      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (3).jpeg",
-      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08.jpeg",
-      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.09 (1).jpeg",
-      "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.09.jpeg"
+      "/images/bobina-strong.jpeg"
     ],
     imageAlt: "Bobina de papel strong",
     category: "bobina",
@@ -74,10 +59,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel semi kraft. Papel resistente, ideal para embrulhos, sacos e proteção.",
     images: [
-      "/images/bobina-semicraft.jpeg",
-      "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (1).jpeg",
-      "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (2).jpeg",
-      "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10.jpeg"
+      "/images/bobina-semicraft.jpeg"
     ],
     imageAlt: "Bobina de papel kraft",
     category: "bobina",
@@ -136,7 +118,7 @@ function ProductCard({ product }: { product: Product }) {
                 {/* Gallery icon overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <span className="bg-black/50 text-white backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-                    Ver {product.images.length} fotos
+                    {product.images.length > 1 ? `Ver ${product.images.length} fotos` : "Ampliar imagem"}
                   </span>
                 </div>
 
