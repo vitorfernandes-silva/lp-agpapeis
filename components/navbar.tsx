@@ -13,6 +13,7 @@ export function Navbar() {
     { href: "#sobre", label: "Sobre" },
     { href: "#diferenciais", label: "Diferenciais" },
     { href: "#produtos", label: "Produtos" },
+    { href: "#refilamento", label: "Refilamento" },
     { href: "#contato", label: "Contato" },
   ]
 

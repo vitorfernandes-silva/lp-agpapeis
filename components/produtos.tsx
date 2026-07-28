@@ -25,7 +25,7 @@ const products: Product[] = [
     description:
       "Papel resistente e versátil. Ideal para embalagens de marmitas, caixa de sapatos, forrações e proteção contra impactos.",
     images: [
-      "/images/Pacote papel Strong/Pacote papel strong (capa).png",
+      "/images/papel-strong.jpeg",
       "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04 (1).jpeg",
       "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04.jpeg"
     ],
@@ -38,8 +38,7 @@ const products: Product[] = [
     description:
       "Papel com barreira impermeável, ideal para lanches, frios e doces. Preserva o frescor e protege contra gordura.",
     images: [
-      "/images/Pacote papel acoplado/Pacote papel acoplado (capa).png",
-      "/images/Caixa papel acoplado/Papel Acoplado (capa).png",
+      "/images/papel-acoplado.jpeg",
       "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (1).jpeg",
       "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (2).jpeg",
       "/images/Pacote papel acoplado/WhatsApp Image 2026-05-15 at 09.12.06 (3).jpeg",
@@ -58,7 +57,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel strong. Ideal para embrulhos, embalagens e diversos fins.",
     images: [
-      "/images/Bobina Strong/Bobina Strong (capa).png",
+      "/images/bobina-strong.jpeg",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (1).jpeg",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (2).jpeg",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (3).jpeg",
@@ -75,7 +74,7 @@ const products: Product[] = [
     description:
       "Bobina composta por papel semi kraft. Papel resistente, ideal para embrulhos, sacos e proteção.",
     images: [
-      "/images/Bobina Semi Kraft/Bobina LWC (capa).png",
+      "/images/bobina-semicraft.jpeg",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (1).jpeg",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (2).jpeg",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10.jpeg"
