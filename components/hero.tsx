@@ -25,7 +25,7 @@ export function Hero() {
           </h1>
           
           <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-xl">
-            A AG Papéis fornece papel cortado e industrialização sob medida para empresas e lojas de embalagens, com logística eficiente e entrega rápida.
+            A AG Papéis fornece papel cortado e industrialização para empresas e lojas de embalagens, oferecendo qualidade e compromisso com as necessidades de cada cliente.
           </p>
           
           <div className="pt-4">

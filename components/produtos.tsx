@@ -21,23 +21,9 @@ type Product = {
 const products: Product[] = [
   // — Papéis Cortados —
   {
-    title: "Papel Jornal",
-    description:
-      "Papel de baixo custo e baixa gramatura. É ideal para embrulho e proteção de mercadorias, como louças, proteção de objetos durante o transporte e preenchimento de caixas.",
-    images: [
-      "/images/Pacote papel Jornal/Pacote papel jornal (capa).png",
-      "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.05 (1).jpeg",
-      "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.05 (2).jpeg",
-      "/images/Pacote papel Jornal/WhatsApp Image 2026-05-15 at 09.12.06.jpeg"
-    ],
-    imageAlt: "Pacote de papel jornal",
-    category: "folha",
-    highlights: ["Baixo custo", "Proteção", "Embrulho"],
-  },
-  {
     title: "Papel Strong",
     description:
-      "Papel resistente e versátil, frequentemente fabricado a partir de material reciclado. Ideal para embalagens de marmitas, caixa de sapatos, forramento de bancadas e embalagens que precisam de durabilidade e proteção reforçada contra impactos. Apresenta ótimo custo benefício. Material atóxico.",
+      "Papel resistente e versátil. Ideal para embalagens de marmitas, caixa de sapatos, forrações e proteção contra impactos.",
     images: [
       "/images/Pacote papel Strong/Pacote papel strong (capa).png",
       "/images/Pacote papel Strong/WhatsApp Image 2026-05-15 at 09.12.04 (1).jpeg",
@@ -45,26 +31,12 @@ const products: Product[] = [
     ],
     imageAlt: "Pacote de papel strong",
     category: "folha",
-    highlights: ["Resistente", "Reciclado", "Atóxico"],
-  },
-  {
-    title: "Papel LWC",
-    description:
-      "Papel revestido em ambos os lados, de baixa gramatura. Papel branco, é ideal para impressões de alta qualidade, como revistas, catálogos e folhetos, oferecendo excelente brilho e reprodução de cores.",
-    images: [
-      "/images/Pacote papel LWC/Pacote papel LWC (capa).png",
-      "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.04 (2).jpeg",
-      "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.04 (3).jpeg",
-      "/images/Pacote papel LWC/WhatsApp Image 2026-05-15 at 09.12.05.jpeg"
-    ],
-    imageAlt: "Pacote de papel LWC",
-    category: "folha",
-    highlights: ["Alto brilho", "Impressão", "Revistas"],
+    highlights: ["Resistente", "Proteção", "Atóxico"],
   },
   {
     title: "Papel Acoplado",
     description:
-      "Papel composto por uma folha de papel de seda colado a uma barreira impermeável de plástico. Possibilidade para contato direto com alimentos, garantindo higiene e frescor na embalagem, além de funcionar como uma barreira para a gordura. Ideal para embrulho de lanche, frios e doces.",
+      "Papel com barreira impermeável, ideal para lanches, frios e doces. Preserva o frescor e protege contra gordura.",
     images: [
       "/images/Pacote papel acoplado/Pacote papel acoplado (capa).png",
       "/images/Caixa papel acoplado/Papel Acoplado (capa).png",
@@ -84,7 +56,7 @@ const products: Product[] = [
   {
     title: "Bobina Papel Strong",
     description:
-      "Bobina composta por papel Strong. Pensada para otimizar processos de embalagem e proteção em larga escala. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
+      "Bobina composta por papel strong. Ideal para embrulhos, embalagens e diversos fins.",
     images: [
       "/images/Bobina Strong/Bobina Strong (capa).png",
       "/images/Bobina Strong/WhatsApp Image 2026-05-15 at 09.12.08 (1).jpeg",
@@ -99,45 +71,9 @@ const products: Product[] = [
     highlights: ["40cm e 60cm", "Larga escala", "Menos desperdício"],
   },
   {
-    title: "Bobina Papel Jornal",
+    title: "Bobina Papel Semi Kraft",
     description:
-      "Bobina composta por papel jornal. Pensada para otimizar processos de embalagem e proteção em larga escala. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
-    images: [
-      "/images/Bobina Jornal/Bobina Jornal (capa).png",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.11 (3).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.12 (1).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.12.jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13 (1).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13 (2).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13 (3).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.13.jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.14 (1).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.14.jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.15 (1).jpeg",
-      "/images/Bobina Jornal/WhatsApp Image 2026-05-15 at 09.12.15.jpeg"
-    ],
-    imageAlt: "Bobina de papel jornal",
-    category: "bobina",
-    highlights: ["40cm e 60cm", "Embalagem", "Proteção"],
-  },
-  {
-    title: "Bobina Papel LWC",
-    description:
-      "Bobina composta por papel LWC. Pensada para impressão contínua de alta definição em equipamentos rotativos e equipamentos digitais. Permite que o usuário utilize exatamente a metragem necessária para cada tarefa, evitando desperdícios. Geralmente comercializada em 40cm e 60cm.",
-    images: [
-      "/images/Bobina LWC/Bobina LWC (capa).png",
-      "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11 (1).jpeg",
-      "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11 (2).jpeg",
-      "/images/Bobina LWC/WhatsApp Image 2026-05-15 at 09.12.11.jpeg"
-    ],
-    imageAlt: "Bobina de Papel LWC",
-    category: "bobina",
-    highlights: ["40cm e 60cm", "Alta definição", "Impressão digital"],
-  },
-  {
-    title: "Bobina Papel Kraft",
-    description:
-      "Bobina composta por papel Kraft. Papel amplamente resistente. De coloração parda. Ideal para embrulhos, sacos proteção de produtos e proteção de pisos. Geralmente comercializada em 40cm e 60cm.",
+      "Bobina composta por papel semi kraft. Papel resistente, ideal para embrulhos, sacos e proteção.",
     images: [
       "/images/Bobina Semi Kraft/Bobina LWC (capa).png",
       "/images/Bobina Semi Kraft/WhatsApp Image 2026-05-15 at 09.12.10 (1).jpeg",
@@ -359,7 +295,7 @@ export function Produtos() {
               }}
             >
               <span className="w-2 h-2 rounded-full bg-[#F09436] animate-pulse" />
-              Nossos Produtos
+              Conheça alguns dos nossos produtos
             </span>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight text-balance mt-4">
               Soluções completas em{" "}
@@ -380,82 +316,85 @@ export function Produtos() {
           </motion.div>
         </div>
 
-        {/* Papéis Cortados */}
-        <div className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center gap-3 mb-8"
-          >
-            <div
-              className="flex items-center justify-center w-10 h-10 rounded-xl shadow-sm"
-              style={{
-                backgroundColor: "rgba(240, 148, 54, 0.1)",
-                border: "1px solid rgba(240, 148, 54, 0.2)",
-              }}
+        {/* All Products in a single row layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
+          {/* Category 1: Papéis Cortados (spans 2 columns on lg) */}
+          <div className="lg:col-span-2 flex flex-col">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-3 mb-6 pb-3 border-b border-gray-200/80"
             >
-              <Package className="w-5 h-5" style={{ color: "#F09436" }} />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 font-serif">
-                Papéis Cortados
-              </h3>
-              <p className="text-sm text-gray-500">Folhas prontas nas medidas que você precisa</p>
-            </div>
-          </motion.div>
+              <div
+                className="flex items-center justify-center w-10 h-10 rounded-xl shadow-xs"
+                style={{
+                  backgroundColor: "rgba(240, 148, 54, 0.1)",
+                  border: "1px solid rgba(240, 148, 54, 0.2)",
+                }}
+              >
+                <Package className="w-5 h-5" style={{ color: "#F09436" }} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 font-serif">
+                  Papéis Cortados
+                </h3>
+                <p className="text-xs text-gray-500">Folhas prontas nas medidas que você precisa</p>
+              </div>
+            </motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {folhas.map((product) => (
-              <ProductCard key={product.title} product={product} />
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Bobinas */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center gap-3 mb-8"
-          >
-            <div
-              className="flex items-center justify-center w-10 h-10 rounded-xl shadow-sm"
-              style={{
-                backgroundColor: "rgba(240, 148, 54, 0.1)",
-                border: "1px solid rgba(240, 148, 54, 0.2)",
-              }}
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
             >
-              <Cylinder className="w-5 h-5" style={{ color: "#F09436" }} />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 font-serif">
-                Bobinas
-              </h3>
-              <p className="text-sm text-gray-500">Formato contínuo para produção em larga escala</p>
-            </div>
-          </motion.div>
+              {folhas.map((product) => (
+                <ProductCard key={product.title} product={product} />
+              ))}
+            </motion.div>
+          </div>
 
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {bobinas.map((product) => (
-              <ProductCard key={product.title} product={product} />
-            ))}
-          </motion.div>
+          {/* Category 2: Bobinas (spans 2 columns on lg) */}
+          <div className="lg:col-span-2 flex flex-col mt-12 lg:mt-0">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-3 mb-6 pb-3 border-b border-gray-200/80"
+            >
+              <div
+                className="flex items-center justify-center w-10 h-10 rounded-xl shadow-xs"
+                style={{
+                  backgroundColor: "rgba(240, 148, 54, 0.1)",
+                  border: "1px solid rgba(240, 148, 54, 0.2)",
+                }}
+              >
+                <Cylinder className="w-5 h-5" style={{ color: "#F09436" }} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 font-serif">
+                  Bobinas
+                </h3>
+                <p className="text-xs text-gray-500">Formato facilitado para produções eficientes</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              {bobinas.map((product) => (
+                <ProductCard key={product.title} product={product} />
+              ))}
+            </motion.div>
+          </div>
         </div>
 
         {/* CTA Banner */}
@@ -481,10 +420,10 @@ export function Produtos() {
 
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold text-white font-serif mb-3">
-              Precisa de um papel sob medida?
+              Precisa de um papel de qualidade?
             </h3>
             <p className="text-white/85 text-base md:text-lg max-w-xl mx-auto mb-8">
-              Industrializamos e cortamos nas dimensões exatas que sua operação precisa.
+              Industrializamos e cortamos o que sua operação precisa.
               Fale com nosso time para uma cotação personalizada.
             </p>
             <Link

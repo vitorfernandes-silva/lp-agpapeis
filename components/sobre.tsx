@@ -25,10 +25,10 @@ export function Sobre() {
             
             <div className="space-y-4 text-secondary leading-relaxed">
               <p>
-                A AG Papéis é especializada na venda de papel cortado e industrialização de papel para empresas de embalagem, gráficas e distribuidores. Nosso compromisso é entregar sempre a melhor qualidade com agilidade no atendimento e flexibilidade para cada cliente.
+                A AG Papéis é especializada na venda de papel cortado e industrialização de papel para empresas de lojas de embalagem. Nosso compromisso é entregar sempre a melhor qualidade com agilidade no atendimento e flexibilidade para cada cliente.
               </p>
               <p>
-                Trabalhamos com processos industriais otimizados que garantem precisão no corte, uniformidade no produto final e rastreabilidade em cada lote entregue.
+                Trabalhamos com processos industriais otimizados que garantem eficiência em cada etapa de produção, com responsabilidade, confiança e excelência.
               </p>
             </div>
           </div>
