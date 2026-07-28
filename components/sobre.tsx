@@ -34,12 +34,13 @@ export function Sobre() {
           </div>
           
           {/* Right Image */}
-          <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md lg:max-w-lg mx-auto w-full">
             <Image
               src="/images/refilamento.jpeg"
               alt="Fábrica de papel industrial"
-              fill
-              className="object-cover"
+              width={809}
+              height={1132}
+              className="w-full h-auto object-cover rounded-2xl"
             />
           </div>
         </div>
